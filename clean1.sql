@@ -12,4 +12,3 @@ FROM
     jsonb_each(raw_json->'Time Series (60min)') AS timeseries(key, value)
 ON CONFLICT (Timestamp)
 DO NOTHING;
-Delete from RawData1;
