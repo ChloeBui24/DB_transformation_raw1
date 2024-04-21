@@ -1,5 +1,5 @@
 
-INSERT INTO WALMART_STOCK (Timestamp, Open, High, Low, Close, Volume)
+INSERT INTO WALMART_STOCK(Timestamp, Open, High, Low, Close, Volume)
 SELECT
     key::TIMESTAMP AS Timestamp,
     (value->>'1. open')::NUMERIC(10, 4) AS Open,
